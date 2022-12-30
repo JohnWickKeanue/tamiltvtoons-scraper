@@ -15,11 +15,11 @@ def toons(url):
     for a in links:
          download = get(a['href'], stream=True, allow_redirects=False)
          url = download.headers["location"]
-         DOMAIN = "https://technemo.xyz/blog"
+         DOMAIN = "https://techyuth.xyz/blog"
          url = url[:-1] if url[-1] == '/' else url
          code = url.split("/")[-1]
          final_url = f"{DOMAIN}/{code}"
-         ref = "https://mytop5.club/"
+         ref = "https://techeysub.online/"
          h = {"referer": ref}
          resp = client.get(final_url, headers=h)
          soup = BeautifulSoup(resp.content, "html.parser")
